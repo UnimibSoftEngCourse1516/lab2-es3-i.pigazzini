@@ -1019,4 +1019,49 @@ public class Assert {
                 expectedThrowable.getSimpleName());
         throw new AssertionError(message);
     }
+    
+    
+    
+    public static void assertGreaterThan (int i1, int i2){
+        if(i1<=i2){
+            fail(null);
+        }
+    }
+    
+    public static void assertGreaterThan (byte i1, byte i2){
+        if(i1<=i2){
+            fail(null);
+        }
+    }
+    
+    public static void assertGreaterThan (short i1, short i2){
+        if(i1<=i2){
+            fail(null);
+        }
+    }
+    
+    public static void assertGreaterThan (long i1, long i2){
+        if(i1<=i2){
+            fail(null);
+        }
+    }
+    
+    public static void assertGreaterThan (float i1, float i2){
+        if(i1<=i2){
+            fail(null);
+        }
+    }
+    
+    public static void assertGreaterThan (double i1, double i2){
+        if(i1<=i2){
+            fail(null);
+        }
+    }
+    
+    
+    public static void assertGreaterThan (char i1, char i2){
+        if(i1<=i2){
+            fail(null);
+        }
+    }
 }

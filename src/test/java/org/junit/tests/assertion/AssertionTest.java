@@ -738,6 +738,13 @@ public class AssertionTest {
         }
         fail();
     }
+    
+    public void testGreaterThan(){
+        Assert.assertGreaterThan(3,2);
+        Assert.assertGreaterThan(2,3);
+        
+        
+    }
 
     private static ThrowingRunnable nonThrowingRunnable() {
         return new ThrowingRunnable() {
