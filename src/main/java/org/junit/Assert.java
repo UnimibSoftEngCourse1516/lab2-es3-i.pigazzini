@@ -1021,13 +1021,9 @@ public class Assert {
         throw new AssertionError(message);
     }
     
-    public static<T> boolean assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator){
-        if(comparator.compare(o1,o2) == 1)
-            return true;
-        
-        else
-            return false;
-        
+    public static<T> void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator){
+        if(comparator.compare(o1,o2) != 1)
+            fail(null);
     }
 
     

@@ -285,13 +285,13 @@ public class AssertionTest {
     }
     
     
-    //test di AssertGreaterThan
+    // test di AssertGreaterThan
     @Test
     public void testAssertGreaterThan() {
         Integer o1 = new Integer(3);
         Integer o2 = new Integer(2);
         C1 c = new C1();
-        assertTrue(Assert.assertGreaterThan(o1,o2,c));
+        Assert.assertGreaterThan(o1,o2, c);
     }
     
 
