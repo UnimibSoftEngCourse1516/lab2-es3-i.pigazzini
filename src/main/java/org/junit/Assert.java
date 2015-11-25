@@ -1,5 +1,6 @@
 package org.junit;
 
+import java.util.Comparator;
 import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;
 import org.junit.internal.ArrayComparisonFailure;
@@ -1019,4 +1020,24 @@ public class Assert {
                 expectedThrowable.getSimpleName());
         throw new AssertionError(message);
     }
+    
+    public static<T> boolean assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator){
+        if(comparator.compare(o1,o2) == 1)
+            return true;
+        
+        else
+            return false;
+        
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
