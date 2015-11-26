@@ -1,5 +1,4 @@
 package org.junit.tests.assertion;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
@@ -284,7 +283,7 @@ public class AssertionTest {
         assertEquals(1.0, 1.0, 0.0);
         assertEquals(1.0d, 1.0d, 0.0d);
     }
-
+    
     @Test(expected = AssertionError.class)
     public void notEqualsObjectWithNull() {
         assertEquals(new Object(), null);
@@ -738,19 +737,27 @@ public class AssertionTest {
         }
         fail();
     }
+
+    // test di AssertGreaterThan
+    @Test
+    public void testAssertGreaterThan() {
+        Integer o1 = new Integer(3);
+        Integer o2 = new Integer(2);
+        C1 c = new C1();
+        Assert.assertGreaterThan(o1,o2, c);
+    }
     
     //test aggiunto
+    @Test
     public void testGreaterThan(){
         Assert.assertGreaterThan(3,2);
         Assert.assertGreaterThan(2,3);
         Assert.assertGreaterThan(3.2,2.3);
         Assert.assertGreaterThan(2.3,3.2);
         Assert.assertGreaterThan(32000,20000);
-        Assert.assertGreaterThan(20000,32000);
-        
-        
+        Assert.assertGreaterThan(20000,32000);   
     }
-
+    
     private static ThrowingRunnable nonThrowingRunnable() {
         return new ThrowingRunnable() {
             public void run() throws Throwable {
