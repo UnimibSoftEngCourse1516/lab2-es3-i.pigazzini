@@ -739,9 +739,14 @@ public class AssertionTest {
         fail();
     }
     
+    //test aggiunto
     public void testGreaterThan(){
         Assert.assertGreaterThan(3,2);
         Assert.assertGreaterThan(2,3);
+        Assert.assertGreaterThan(3.2,2.3);
+        Assert.assertGreaterThan(2.3,3.2);
+        Assert.assertGreaterThan(32000,20000);
+        Assert.assertGreaterThan(20000,32000);
         
         
     }
